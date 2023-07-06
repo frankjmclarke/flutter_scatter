@@ -39,12 +39,12 @@ abstract class ScatterDelegate {
   /// with dimensions width/height respecting 16.0/9.0.
   final double ratio;
 
-  double _ratioX;
+  double _ratioX=1;
 
   /// The ratio used for the x-axis points.
   double get ratioX => _ratioX;
 
-  double _ratioY;
+  double _ratioY=1;
 
   /// The ratio used for the y-axis points.
   double get ratioY => _ratioY;
