@@ -59,7 +59,7 @@ abstract class ScatterDelegate {
         this.ratio ?? (value.isFinite ? value.width / value.height : 1.0);
     _ratioX = ratio >= 1 ? ratio : 1.0;
     _ratioY = ratio <= 1 ? ratio : 1.0;
-    _ratioY *= 1.4;
+   // _ratioY *= 1.4;
   }
 
   /// Returns the child offset for the given iteration.
