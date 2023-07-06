@@ -49,7 +49,7 @@ abstract class ScatterDelegate {
   /// The ratio used for the y-axis points.
   double get ratioY => _ratioY;
 
-  Size _availableSize;
+  Size _availableSize=Size(300, 200);
 
   /// The available size to place children.
   Size get availableSize => _availableSize;
@@ -118,9 +118,9 @@ abstract class SpiralScatterDelegate extends ScatterDelegate {
         _rotationRadians = rotation * _2pi,
         super(ratio: ratio);
 
-  final double _stepRadians;
+  final double _stepRadians=1.0;
 
-  final double _rotationRadians;
+  final double _rotationRadians=1.0;
 
   Offset getPositionForIteration(
     int iteration,
@@ -164,12 +164,12 @@ class ArchimedeanSpiralScatterDelegate extends SpiralScatterDelegate {
   /// The initial radius of the spiral.
   ///
   /// This is the **a** parameter in the equation **r=a+bθ**.
-  final double a;
+  final double a=1;
 
   /// The distance between successive turns of the spiral.
   ///
   /// This is the **b** parameter in the equation **r=a+bθ**.
-  final double b;
+  final double b=1;
 
   double computeRadius(double angle) => a + b * angle;
 
@@ -226,12 +226,12 @@ class LogarithmicSpiralScatterDelegate extends SpiralScatterDelegate {
   /// The initial radius of the spiral.
   ///
   /// This is the **a** parameter in the equation **r=ae^bθ**.
-  final double a;
+  final double a=1.0;
 
   /// The distance between successive turns of the spiral.
   ///
   /// This is the **b** parameter in the equation **r=ae^bθ**.
-  final double b;
+  final double b=1.0;
 
   double computeRadius(double angle) => a * math.exp(b * angle);
 }
@@ -287,10 +287,10 @@ class EllipseScatterDelegate extends ScatterDelegate {
         _startRadians = start * _2pi;
 
   /// Semi x-axis.
-  final double a;
+  final double a=1.0;
 
   /// Semi y-axis.
-  final double b;
+  final double b=1.0;
 
   final double _stepRadians;
   final double _startRadians;
@@ -310,10 +310,10 @@ class ScatterParentData extends ContainerBoxParentData<RenderBox> {
   int index;
 
   /// The child's width.
-  double width;
+  double width=1.0;
 
   /// The child's height.
-  double height;
+  double height=1.0;
 
   Rect get rect => Rect.fromLTWH(
         offset.dx,
